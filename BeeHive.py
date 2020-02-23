@@ -87,9 +87,9 @@ for i in range(BEES):
     bees.append({'rect': pygame.Rect(ENTRANCEX, ENTRANCEY, ENTRANCESIZE, ENTRANCESIZE),
                  'color':BLACK,'speedDown': 0, 'speedRight': 0, 'beeBorn': False, 'beeIn': False })
 
-# Loading and stretching the player image.
-#playerImage = pygame.image.load('beesprite.png')
-#playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
+# Loading and stretching the player image. (Image not being used in this version.)
+#playerImage = pygame.image.load('beesprite.png') 
+#playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE)) 
 
 # Loading and stretching the background image.
 backgroundImage = pygame.image.load('hive2.png')
