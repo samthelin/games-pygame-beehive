@@ -1,3 +1,18 @@
+import pygame, sys, random, math
+from pygame.locals import *
+
+# Set up pygame.
+pygame.init()
+mainClock = pygame.time.Clock()
+
+# Set up the window.
+WINDOWWIDTH = 700
+WINDOWHEIGHT = 700
+windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
+pygame.display.set_caption('BeeHive')
+
+# Set up the colors.
+BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 YELLOW = (255, 255, 0)
 RED = (220, 0, 0)
@@ -73,8 +88,8 @@ for i in range(BEES):
                  'color':BLACK,'speedDown': 0, 'speedRight': 0, 'beeBorn': False, 'beeIn': False })
 
 # Loading and stretching the player image.
-playerImage = pygame.image.load('beesprite.png')
-playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
+#playerImage = pygame.image.load('beesprite.png')
+#playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
 
 # Loading and stretching the background image.
 backgroundImage = pygame.image.load('hive2.png')
@@ -155,7 +170,7 @@ def resetParameters():
     for i in range(BEES):
         bees.append({'rect': pygame.Rect(ENTRANCEX, ENTRANCEY, ENTRANCESIZE, ENTRANCESIZE),
                  'color':BLACK,'speedDown': 0, 'speedRight': 0, 'beeBorn': False, 'beeIn': False })
-    playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
+    #playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
     moveLeft = 0
     moveRight = 0
     moveUp = 0
@@ -216,7 +231,7 @@ while True:
         for i in range(BEES):
             bees.append({'rect': pygame.Rect(ENTRANCEX, ENTRANCEY, ENTRANCESIZE, ENTRANCESIZE),
                      'color':BLACK,'speedDown': 0, 'speedRight': 0, 'beeBorn': False, 'beeIn': False })
-        playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
+        #playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
         moveLeft = 0
         moveRight = 0
         moveUp = 0
@@ -256,7 +271,7 @@ while True:
         for i in range(BEES):
             bees.append({'rect': pygame.Rect(ENTRANCEX, ENTRANCEY, ENTRANCESIZE, ENTRANCESIZE),
                      'color':BLACK,'speedDown': 0, 'speedRight': 0, 'beeBorn': False, 'beeIn': False })
-        playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
+        #playerStretchedImage = pygame.transform.scale(playerImage, (ENTRANCESIZE, ENTRANCESIZE))
         moveLeft = 0
         moveRight = 0
         moveUp = 0
@@ -386,7 +401,7 @@ while True:
         player.width += 1
         player.height += 1
         (player.centerx, player.centery) = (entrance.centerx, entrance.centery)
-        playerStretchedImage = pygame.transform.scale(playerImage, (player.width, player.height))
+        #playerStretchedImage = pygame.transform.scale(playerImage, (player.width, player.height))
     else:
         playerIn = True
 
